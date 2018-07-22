@@ -11,7 +11,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 const CONFIG = {
     entry: './src/js/app.js',
     output: {
-      path: path.resolve(__dirname, './build'),
+      path: path.resolve(__dirname, './dist'),
       filename: 'app.js'
     },
     plugins: [
@@ -26,7 +26,7 @@ const CONFIG = {
       }),
       new HtmlReplaceWebpackPlugin([
         {
-          pattern: '<script type="text/javascript" src="../build/app.js"></script>',
+          pattern: '<script type="text/javascript" src="../dist/app.js"></script>',
           replacement: ''
         },
         {
@@ -71,6 +71,14 @@ const CONFIG = {
               options: {}
             }
           ]
+        },
+        {
+          test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+          loader: 'file-loader?name=../dist/fonts/[name].[ext]'
+        },
+        {
+          test: /\.(svg?)(\?[a-z0-9]+)?$/,
+          loader: 'file-loader?name=./dist/images/[name].[ext]'
         }
       ],
     },
