@@ -1,5 +1,10 @@
 const testModules = require('./test-module');
 require('../css/app.css');
+require('../apple-touch-icon.png');
+require('../favicon-32x32.png');
+require('../favicon-16x16.png');
+require('../safari-pinned-tab.svg');
+require('../favicon.ico');
 
 window.onload = function(){
     let file = document.getElementById("files");

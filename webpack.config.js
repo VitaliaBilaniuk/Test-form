@@ -74,12 +74,16 @@ const CONFIG = {
         },
         {
           test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-          loader: 'file-loader?name=../dist/fonts/[name].[ext]'
+          loader: 'file-loader?name=../fonts/[name].[ext]'
         },
         {
           test: /\.(svg?)(\?[a-z0-9]+)?$/,
-          loader: 'file-loader?name=./dist/images/[name].[ext]'
-        }
+          loader: 'file-loader?name=../images/[name].[ext]'
+        },
+        {
+          test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.wav$|\.mp3$/,
+          loader: 'file-loader?name=[name].[ext]' 
+      }
       ],
     },
     devServer: {
