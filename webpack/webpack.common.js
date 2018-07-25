@@ -24,7 +24,19 @@ module.exports = {
     ]),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html')
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: 'src/images/',
+      to: 'images/'
+    }, {
+      from: 'src/*.txt',
+      to: './[name].[ext]',
+      toType: 'template'
+    }]),
+    new CopyWebpackPlugin([
+      { from: 'src/scripts/',
+      to: 'scripts/' }
+    ]),
   ],
   resolve: {
     alias: {

@@ -5,7 +5,7 @@ const common = require('./webpack.common.js');
 const Webpack = require('webpack');
 const Path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const ExtractSASS = new ExtractTextPlugin('styles/bundle.css');
+const ExtractSASS = new ExtractTextPlugin('bundle.css');
 
 module.exports = merge(common, {
   mode: 'production',
