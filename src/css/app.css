@@ -498,7 +498,7 @@ input[type="file"] {
   z-index:100;
   margin-left: 35px;
 }
-.tabordion section label h3 {
+.tabordion section label .h3 {
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -507,8 +507,9 @@ input[type="file"] {
   letter-spacing: normal;
   color: rgba(51, 51, 51, 0.5);
   margin: 0 0 5px 0;
+  display: block;
 }
-.tabordion section label p {
+.tabordion section label .p {
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -517,6 +518,7 @@ input[type="file"] {
   letter-spacing: normal;
   color: rgba(51, 51, 51, 0.5);;
   margin: 0;
+  display: block;
 }
 .first-tab::before {
   content: "\e900";
@@ -624,7 +626,7 @@ input[type="file"] {
   transform-origin: 0 0;
   transform: rotate(40deg);
 }
-.tabordion input[name="sections"]:checked + label h3, .tabordion input[name="sections"]:checked + label p{ 
+.tabordion input[name="sections"]:checked + label .h3, .tabordion input[name="sections"]:checked + label .p{ 
   color: #333333;
 }
 .tabordion input[name="sections"]:checked + .third-tab::before,
