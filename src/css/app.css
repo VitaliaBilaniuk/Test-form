@@ -498,6 +498,10 @@ input[type="file"] {
   z-index:100;
   margin-left: 35px;
 }
+.tabordion section label:hover {
+  transform: scale(1.1);
+  transition: all .9s;
+}
 .tabordion section label .h3 {
   font-size: 20px;
   font-weight: 500;
@@ -687,5 +691,10 @@ input[type="file"] {
   }
   .card-details {
     margin-top: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .tab-body .card-wrp {
+    height: 60px;
   }
 }
