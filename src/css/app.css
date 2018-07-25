@@ -575,9 +575,9 @@ input[type="file"] {
   box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.2);
   width: 100%;
   height: 80px;
-  position: relative;
   margin: 10px 0 0 0;
   cursor: pointer;
+  display: flex;
 }
 .tab-body .card-wrp.active {
   background-image: linear-gradient(78deg, #f57e80, #d43535);
@@ -590,13 +590,8 @@ input[type="file"] {
   height: 50px;
 }
 .tab-body .card-wrp img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
   margin: auto;
   display: block;
-  left: 50%;
-  transform: translate(-50%);
 }
 .tab-body .card-block {
   border-radius: 15px;
@@ -676,6 +671,9 @@ input[type="file"] {
   .container .submit-btn {
     margin-top: 520px;
   }
+  .tab-body .card-wrp{
+    height: 60px;
+  }
 }
 @media (max-width:992px) {
   .file-upload, #file-name {
@@ -686,5 +684,8 @@ input[type="file"] {
   }
   .tabordion section .tab-body::before {
     content: unset;
+  }
+  .card-details {
+    margin-top: 20px;
   }
 }
