@@ -91,3 +91,14 @@ window.onload = function(){
 function submitForm(form) {
     return alert('The form is submitted');
 }
+
+//Add active class to payment method
+let btnContainer = document.getElementById("paymentBlock");
+let btns = btnContainer.getElementsByClassName("card-wrp");
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
